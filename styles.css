@@ -1,0 +1,158 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+header {
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.products {
+    flex: 2;
+}
+
+.add-product {
+    flex: 1;
+    margin-top: 20px;
+}
+
+h1, h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+.product-card button {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product-card button:hover {
+    background-color: #c62828;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form button[type="reset"] {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+footer {
+    background-color: #6a1b9a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    .add-product {
+        margin-left: 20px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        font-size: 20px;
+    }
+
+    .product-card h3 {
+        font-size: 0.9em;
+    }
+
+    .product-card p {
+        font-size: 0.9em;
+    }
+}
